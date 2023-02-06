@@ -55,7 +55,7 @@ int main(){
     }
     char znak;
     printf("Podaj operacje(+,-,*,/): ");
-    scanf("%c",&znak);
+    fflush(stdin);
     scanf("%c",&znak);
     switch(znak){
         case '+':
