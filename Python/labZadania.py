@@ -1,4 +1,13 @@
 from os import system
+from platform import system as sys
+if(sys()=="Linux"):
+    CLEAR = "clear"
+if(sys()=="Windows"):
+    CLEAR = "cls"
+if(sys()=="Darwin"):
+    CLEAR = "clear"
+
+
 #zad 1
 print("""## 1. Sprawdź wynik działań
 # 0 > 1
@@ -18,12 +27,14 @@ print(1==1)
 print(1!=0)
 print(1!=1)
 input()
+system(CLEAR)
 # Zad 2
 print("2. Oblicz wyrażenie 2x+5y   gdzie: x,y to dowolne dwie liczby które podaje użytkownik (w konsoli)")
 varX = input("x=")
 varY = input("y=")
 print(2*int(varX)+5*int(varY))
 input()
+system(CLEAR)
 # zad 3
 print("""
 ## 3. Wyświetl zdanie "Jestem a b mam c lat studiuję d",
@@ -34,10 +45,12 @@ age = int(input("Wiek: "))
 studies = input("Kierunek studiow: ")
 print(f"Jestem {name} {surname} mam {age} lat studiuję {studies}")
 input()
+system((CLEAR))
 # zad 4
 print("## 4. Sprawdź/porównaj czy 1+2+10+20000001+4+347586970885 jest równa 321784560456434534646")
 print((1+2+10+20000001+4+347586970885)==321784560456434534646)
 input()
+system(CLEAR)
 # zad 5
 print("""## 5. Sprawdź czy suma dowolnych dwóch liczb podanych przez użytkownika jest liczbą parzystą czy nieparzystą wyświetl właściwy komunikat
 ##   użyj operatora modulo % który zwraca resztę z dzielenia  np. 5%2   czyli 2 reszta 0""")
@@ -48,15 +61,17 @@ if (varA+varB)%2==0:
 else:
     print("Nieparzysta")
 input()
+system(CLEAR)
 # zad 6
-print("""## 6. Utwórz prosty kalkulator dla 2 zmiennych podanych przez użytkownika, który obliczy: sumę, różnicę,
-## iloczyn, iloraz, potęgę tych liczb, nie zapomnij o stosownych komentarzach informacyjnych dla użytkownika.""")
+
 end = False
 while(end==False):
-    system("clear")
+    system(CLEAR)
+    print("""## 6. Utwórz prosty kalkulator dla 2 zmiennych podanych przez użytkownika, który obliczy: sumę, różnicę,
+    ## iloczyn, iloraz, potęgę tych liczb, nie zapomnij o stosownych komentarzach informacyjnych dla użytkownika.""")
     varA = int(input("a= "))
     varB = int(input("b= "))
-    choice = input("1. Dodawanie\n2. Odejmowanie\n3. Mnozenie\n4. Dzielenie\nx. Wyjscie")
+    choice = input("1. Dodawanie\n2. Odejmowanie\n3. Mnozenie\n4. Dzielenie\nx. Wyjscie\n")
     match choice:
         case "1":
             print(f"wynik = {varA+varB}")
@@ -75,6 +90,7 @@ while(end==False):
         case _:
             print("Podano zly wybor")
             input()
+system(CLEAR)
 print("## 7. Dla dowolnego x sprawdź wynik działań (x > 1 and x < 13) oraz (x != 5 or x < 0)")
 varX = int(input("Podaj x: "))
 print(x>1 and x<13)
