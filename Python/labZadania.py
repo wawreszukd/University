@@ -93,8 +93,8 @@ while(end==False):
 system(CLEAR)
 print("## 7. Dla dowolnego x sprawdź wynik działań (x > 1 and x < 13) oraz (x != 5 or x < 0)")
 varX = int(input("Podaj x: "))
-print(x>1 and x<13)
-print(x!=5 or x<0)
+print(varX>1 and varX<13)
+print(varX!=5 or varX<0)
 # Zadania dodatkowe:
 # 1. Wykonaj mini ankietę tj. poproś użytkownika o następujące informacje: imie, nazwisko, wiek, zadaj mu pytania: "Czy zdrowo się odżywiasz?",
 # , "Czy lubisz sport?" i dodatkowo 3 inne własne. Po uzyskaniu wszystkich odpowiedzi wyświetl ich podsumowanie.
