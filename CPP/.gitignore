@@ -1,1 +1,3 @@
 compiled/
+CMakeLists.txt
+cmake-build-debug/
